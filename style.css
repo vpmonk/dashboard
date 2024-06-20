@@ -1,0 +1,177 @@
+
+        .sidebar {
+            height: 100vh;
+            background: #f8f9fa;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 250px; 
+            transition: width 0.3s; 
+        }
+        .sidebar.collapsed {
+            width: 60px; 
+        }
+        .carousel-item{
+            width: 500px;
+       
+        }
+        .content {
+            padding: 20px;
+            margin-left: 250px; 
+            transition: margin-left 0.3s; 
+        }
+        .content.collapsed {
+            margin-left: 60px; 
+        }
+        .sales-graph {
+            height: 400px;
+        }
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+            background: #fff;
+            border-bottom: 1px solid #dee2e6;
+        }
+        .header .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        .header .search-bar {
+            flex-grow: 1;
+            margin: 0 20px;
+        }
+        .header .icons {
+            display: flex;
+            align-items: center;
+        }
+        .header .icons img {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            margin-left: 20px;
+        }
+        .carousel-item img {
+            width: 100%;
+            height: auto;
+        }
+        .stats {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        .stats .card {
+            margin-bottom: 20px;
+        }
+        .latest-customers .list-group {
+            margin-bottom: 0;
+        }
+        .latest-customers .list-group-item {
+            border: none;
+            padding: 10px;
+        }
+        .latest-customers .list-group-item .customer-info {
+            display: flex;
+            align-items: center;
+        }
+        .latest-customers .list-group-item .customer-info img {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+        .latest-customers .list-group-item .customer-info span {
+            font-weight: bold;
+        }
+        .latest-customers .list-group-item .customer-info .amount {
+            margin-left: auto;
+        }
+        .transactions .table {
+            margin-bottom: 0;
+        }
+        .transactions .table th,
+        .transactions .table td {
+            padding: 8px;
+            vertical-align: middle;
+        }
+        .transactions .table td.amount {
+            text-align: right;
+        }
+        .transactions .table td.status {
+            text-align: center;
+        }
+        .transactions .table td.status .badge {
+            margin-bottom: 0;
+        }
+        .card-body {
+            padding: 20px;
+        }
+        
+        @media (max-width: 992px) {
+            .sidebar {
+                width: 60px; 
+            }
+            .content {
+                margin-left: 60px; 
+            }
+            .content.collapsed {
+                margin-left: 0; 
+            }
+            .stats .card, 
+            .latest-customers .card, 
+            .transactions .card {
+                width: 100%;
+            }
+            .sales-graph {
+                margin-top: 20px;
+            }
+            .header .search-bar {
+                display: none;
+            }
+        }
+        @media (max-width: 768px) {
+            .sidebar {
+                display: none;
+            }
+            .content {
+                margin-left: 0;
+            }
+            .stats {
+                flex-direction: column;
+            }
+            .deviceChart {
+                text-align: center;
+            }
+            .transactions .table {
+                overflow-x: auto;
+            }
+            .latest-customers .list-group-item .customer-info {
+                flex-direction: column;
+            }
+            .latest-customers .list-group-item .customer-info .amount {
+                margin-left: 0;
+                margin-top: 5px;
+            }
+        }
+        .sales-info {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .sales-info h1 {
+            margin-bottom: 0;
+        }
+        .sales-info .btn-toolbar {
+            margin-top: 0;
+        }
+        .sales-info .btn {
+            padding: 0.5rem 1rem;
+        }
+        .transactions .show-all-btn {
+            display: block;
+            margin: 10px 0;
+            text-align: center;
+        }
+    
